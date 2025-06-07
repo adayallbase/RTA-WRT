@@ -38,6 +38,7 @@ declare_packages() {
         # KIDDIN9 packages
         "luci-app-diskman_|${REPOS[KIDDIN9]}"
         "xmm-modem_|${REPOS[KIDDIN9]}"
+        "speedtestcli_|${REPOS[KIDDIN9]}"
 
         # IMMORTALWRT packages
         "luci-app-openclash_|${REPOS[IMMORTALWRT]}/luci"

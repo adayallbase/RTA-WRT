@@ -65,17 +65,13 @@ on:
       tunnel:
         description: "Select VPN Client app:"
         required: true
-        default: "all-tunnel"
+        default: "openclash"
         type: choice
         options:
           - openclash
-          - passwall
           - nikki
           - openclash-passwall
-          - nikki-passwall
           - nikki-openclash
-          - all-tunnel
-          - no-tunnel
       clean:
         description: "Do 'make clean' for each run"
         required: false

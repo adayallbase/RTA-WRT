@@ -40,7 +40,7 @@ uci set network.wan.metric='10'
 uci set network.tethering=interface
 uci set network.tethering.proto='dhcp'
 uci set network.tethering.device='usb0'
-uci set network.WAN2.metric='20'
+uci set network.tethering.metric='20'
 uci -q delete network.wan6
 uci commit network
 uci set firewall.@zone[1].network='wan tethering'

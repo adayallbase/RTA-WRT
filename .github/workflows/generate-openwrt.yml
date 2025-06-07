@@ -574,17 +574,6 @@ jobs:
           fi
           echo "status=success" >> $GITHUB_OUTPUT
 
-      - name: Mod SDCard
-        id: modsdcard
-        if: steps.repack.outputs.status == 'success'
-        run: |
-          cd ${WORKING_DIR}
-          chmod +x scripts/MODSDCARD.sh
-          if [[ "$TYPE" =~ ^(OPHUB|ULO)$ ]]; then
-            ./scripts/MODSDCARD.sh
-          fi
-          echo "status=success" >> $GITHUB_OUTPUT
-
       - name: Before Upload
         id: beforeupload
         if: steps.modsdcard.outputs.status == 'success'

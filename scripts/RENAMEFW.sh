@@ -103,7 +103,7 @@ rename_firmware() {
         "Amlogic_s905x-Mod_SDCard-B860H_v1-v2|Amlogic_s905x-Mod_SDCard-B860H_v1-v2"
     )
 
-    RELEASE_URL="https://github.com/rizkikotet-dev/RTA-WRT/releases/download/${RELEASE_TAG}"
+    RELEASE_URL="https://github.com/aday-allbase/RTA-WRT/releases/download/${RELEASE_TAG}"
 
     for pattern in "${search_replace_patterns[@]}"; do
         local search="${pattern%%|*}"
@@ -116,7 +116,7 @@ rename_firmware() {
             if [[ "$file" =~ k[0-9]+\.[0-9]+\.[0-9]+(-[A-Za-z0-9-]+)? ]]; then
                 kernel="${BASH_REMATCH[0]}"
             fi
-            local new_name="RTA-WRT-${OP_BASE}-${BRANCH}-${replace}-${kernel}-${TUNNEL}.img.gz"
+            local new_name="OPEN-WRT-${OP_BASE}-${BRANCH}-${replace}-${kernel}-${TUNNEL}.img.gz"
             echo "${replace}-${kernel:-}${TUNNEL}|${RELEASE_URL}/${new_name}" >> artifacts.txt
             echo -e "${INFO} Renaming: $file → $new_name"
             mv "$file" "$new_name" || echo -e "${WARNING} Failed to rename $file"
@@ -125,7 +125,7 @@ rename_firmware() {
         # Process .tar.gz files
         for file in *"${search}"*.tar.gz; do
             [[ -f "$file" ]] || continue
-            local new_name="RTA-WRT-${OP_BASE}-${BRANCH}-${replace}-${TUNNEL}.tar.gz"
+            local new_name="OPEN-WRT-${OP_BASE}-${BRANCH}-${replace}-${TUNNEL}.tar.gz"
             echo -e "${INFO} Renaming: $file → $new_name"
             mv "$file" "$new_name" || echo -e "${WARNING} Failed to rename $file"
         done

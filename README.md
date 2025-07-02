@@ -1,7 +1,7 @@
 <h3 align="center">
   <br>OPENWRT | IMMORTALWRT<br>
 </h3>
-<h4 align="center">23.05.5 | 24.10.1</h4>
+<h4 align="center">23.05.5 | 24.10.2</h4>
 <p align="center">IMAGEBUILDER | ULOBUILDER</p>
 <p align="center">SCRIPT CUSTOM BY FRIWRT | RTA-WRT</p>
 
